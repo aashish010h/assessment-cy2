@@ -15,8 +15,9 @@ git clone <repository-url>
 ### 2. Install Dependencies
 
 ```
-cd laravel-project
+cd assessment-cy2
 composer install
+npm install
 ```
 
 ### 3. Configure Environment
@@ -28,7 +29,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-Make sure to configure your database settings in the `.env` file.
+Make sure to configure your database settings in the `.env` file. And put the API URL in VITE_API_URL.
 
 ### 4. Run Migrations
 
@@ -39,10 +40,11 @@ php artisan migrate
 ### 5. Serve the Application
 
 ```
+npm run dev
 php artisan serve
 ```
 
-Visit `http://localhost:8000` in your browser to see your Laravel application.
+Visit `http://localhost:8000` in your browser to see your Laravel + React application.
 
 ## Additional Information
 

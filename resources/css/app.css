@@ -107,3 +107,7 @@ input, .p-inputwrapper{
     display: inline-block;
     text-decoration: none;
 }
+.comment-title {
+   width: 70%;
+}
+

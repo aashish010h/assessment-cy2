@@ -60,7 +60,7 @@ const AddPostModal = ({ isOpen, setPostModal }) => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="admin_form_wrapper">
                         <div className="row">
-                            <div className="col-md-6">
+                            <div className="col-md-12">
                                 <div className="form-group">
                                     <label htmlFor="title">Post Title</label>
                                     <Controller

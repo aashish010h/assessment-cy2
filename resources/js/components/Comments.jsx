@@ -70,7 +70,9 @@ const Comments = ({ comments, postId }) => {
                                             Delete
                                         </a>
                                     </div>
-                                    <h5>{comment.title}</h5>
+                                    <h5 className="comment-title">
+                                        {comment.title}
+                                    </h5>
                                     <p>{comment.body}</p>
                                     <div className="comment-by">
                                         <small>

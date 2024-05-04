@@ -50,7 +50,7 @@ const Login = () => {
                 //for showing the toast msg if any error occurs
                 setIsSubmiting(false);
                 console.log("res", err);
-                // toast.error(err.response.data.message);
+                toast.error(err.response.data.message);
             });
     };
     return (

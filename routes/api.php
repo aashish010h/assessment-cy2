@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//routes for login using laravel sanctum
+//REST API routes for login using laravel sanctum
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', [AuthController::class, 'login']);
     Route::post('register', [AuthController::class, 'register']);
@@ -26,7 +26,7 @@ Route::group(['prefix' => 'auth'], function () {
         Route::get('logout', [AuthController::class, 'logout']);
     });
 });
-//all the router for the users for managing post and comments
+//all the API routes for the users for managing post and comments
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::prefix('user')->group(function () {
         Route::get('posts', [PostController::class, 'index']);

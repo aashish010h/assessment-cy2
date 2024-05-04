@@ -17,6 +17,8 @@ return new class extends Migration
             $table->longText("description")->nullable();
             $table->unsignedBigInteger('created_by');
             $table->timestamps();
+            // Define a foreign key constraint for the 'created_by' column referencing the 'id' column in the 'users' table
+            // Cascade on delete and update actions to maintain referential integrity
             $table->foreign('created_by')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
