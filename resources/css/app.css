@@ -1,15 +1,9 @@
-
-
-
-
-
 .login-form {
     border: 1px solid rgb(235, 219, 189);
     max-width: 30%;
     padding: 2rem;
     margin: 200px auto;
 }
-
 .form-group{
     display: flex;
     flex-direction: row;
@@ -20,7 +14,18 @@
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-
+}
+.goto-register {
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    color:#555555;
+}
+nav  a{
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    color:#555555;
 }
 nav {
     display: flex;
@@ -31,4 +36,74 @@ nav {
     background-color: antiquewhite;
     padding: 2rem;
 }
-
+.form-group{
+    display: block;
+    margin-bottom: 15px;
+}
+input, .p-inputwrapper{
+    width: 100%;
+    display: block;
+}
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.login-form{
+    border: 0;
+    box-shadow: 0px 50px 78px rgba(0,0,0,.08);
+}
+.img-wrapper img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-name h2{
+    font-size: 22px;
+}
+.all-comments{
+    list-style: none;
+    padding: 0px;
+    height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.all-comments li{
+    background: #F5F5F5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    position: relative;
+}
+.actions{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.actions a{
+    display: inline-block;
+    padding: 3px 7px;
+    background:rgb(0, 0, 0, 0.5);
+    text-decoration: none;
+    color:#ffffff;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.comment-by small{
+    background:#dddddd;
+    padding: 5px 10px;
+}
+.post-content{
+    max-width: 950px;
+    margin: 0 auto;
+}
+.add-action a{
+    background:#555555;
+    color:#ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+}

@@ -3,6 +3,6 @@
 if (!function_exists('getAuthId')) {
     function getAuthId()
     {
-        return auth()->guard('api')->user()?->id;
+        return auth()->user()->id; // Assuming user is authenticated
     }
 }

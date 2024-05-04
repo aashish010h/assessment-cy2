@@ -3,6 +3,8 @@ import Login from "../pages/Login";
 import Home from "../pages/Home";
 import UserDashboard from "../components/layouts/UserLayout";
 import Register from "../pages/Register";
+
+//creating path and asigning the respective componenet for routing using react router
 const router = createBrowserRouter([
     {
         path: "/",
@@ -12,7 +14,6 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
     },
-
     {
         path: "/user",
         element: <UserDashboard />,

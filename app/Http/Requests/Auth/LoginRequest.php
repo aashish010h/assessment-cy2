@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class LoginRequest extends FormRequest
 {
-
+    //validation for email and password
     public function rules(): array
     {
         return [

@@ -13,13 +13,12 @@ class StoreCommentRequest extends FormRequest
     {
         return true;
     }
-
+    //validation rules for the comment
     public function rules(): array
     {
         return [
             'title' => 'required|string',
             'body' => 'required|string',
-            'created_by' => "required"
         ];
     }
 }

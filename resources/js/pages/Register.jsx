@@ -4,14 +4,17 @@ import { useForm, Controller } from "react-hook-form";
 import { Password } from "primereact/password";
 import { Button } from "primereact/button";
 import Axios from "../utils/Axios";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     const [isSubmiting, setIsSubmiting] = useState(false);
+    const navigate = useNavigate();
     const defaultValues = {
         email: "",
         password: "",
         name: "",
-        password_confirmation: "",
+        confirmation_password: "",
     };
     const {
         control,
@@ -27,15 +30,19 @@ const Register = () => {
             )
         );
     };
+    //calling api for the register using axios
     const onSubmit = (data) => {
         setIsSubmiting(true);
-        Axios.post("login", data)
+        Axios.post("auth/register", data)
             .then((res) => {
+                navigate("/");
                 setIsSubmiting(false);
+                toast.success("Registration success, please login to proceed.");
             })
             .catch((err) => {
                 setIsSubmiting(false);
-                console.log("err on login form", err);
+                toast.error(err.response.data.message);
+                console.log("err on login form", err.response.data.message);
             });
     };
     return (
@@ -107,7 +114,7 @@ const Register = () => {
                     <div className="form-group">
                         <label>Confirm Password</label>
                         <Controller
-                            name="password_confirmation"
+                            name="confirmation_password"
                             control={control}
                             rules={{
                                 required: "Please confirm your password.",
@@ -118,7 +125,7 @@ const Register = () => {
                             }}
                             render={({ field }) => (
                                 <Password
-                                    id={field.password_confirmation}
+                                    id={field.confirmation_password}
                                     {...field}
                                     feedback={false}
                                     toggleMask
@@ -126,7 +133,7 @@ const Register = () => {
                                 />
                             )}
                         />
-                        {getFormErrorMessage("password_confirmation")}
+                        {getFormErrorMessage("confirmation_password")}
                     </div>
                     <div>
                         <Button
